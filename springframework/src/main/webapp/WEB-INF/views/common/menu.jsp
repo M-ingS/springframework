@@ -277,5 +277,25 @@
 			</div>
 		</div>
 	</div>
+	
+	<!-- Ch13 -->
+	<div class="accordion-item">
+		<h2 class="accordion-header">
+			<button class="accordion-button ${chNum=='ch13'?'':'collapsed'}"
+				type="button" data-bs-toggle="collapse" data-bs-target="#ch13"
+				aria-expanded="${chNum=='ch13'}" aria-controls="ch13">
+				Ch13. 데이터베이스 연동</button>
+		</h2>
+		<div id="ch13"
+			class="accordion-collapse collapse ${chNum=='ch13'?'show':''}"
+			data-bs-parent="#accordionMenu">
+			<div class="accordion-body">
+				<ul>
+					<li><a href="${pageContext.request.contextPath}/ch13/writeBoardForm">게시물 쓰기 </a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
 
 </div>
