@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.mycompany.springframework.dao.mybatis.Ch13BoardDao">
+	
+	<insert id="insert" parameterType="Board">
+		insert into board (
+			bno, btitle, bcontent, bdate, mid, bhitcount, 
+         	battachoname, battachsname, battachtype, battachdata
+         ) values (
+         	seq_bno.nextval, #{btitle}, #{bcontent}, sysdate, #{mid}, 0,
+         	#{battachoname}, #{battachsname}, #{battachtype}, #{battachdata}
+         	
+         )
+		<!-- seq_bno.nextval: bno는 사용자가 정하는게 아니라 시퀀스에서 자동으로 부여 
+			나머지 사용자가 직접 지정하는 값들: #붙여서 지정
+			값이 없으면 sql로 insert할 때 null로 들어감 
+		-->
+	</insert>
+
+</mapper>
