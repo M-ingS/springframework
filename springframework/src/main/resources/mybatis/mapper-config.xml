@@ -19,6 +19,9 @@
 		<typeAlias
 			type="com.mycompany.springframework.dto.Ch13Account" 
 			alias="Account" />
+		<typeAlias
+			type="com.mycompany.springframework.dto.Ch13Pager" 
+			alias="Pager" />
 
 	</typeAliases>
 </configuration>
