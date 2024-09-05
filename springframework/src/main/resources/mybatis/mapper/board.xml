@@ -40,5 +40,45 @@
 	<select id="countRows" resultType="int">
 		select count(*) from board
 	</select>
+	<!-- parameterType="int" resultType="Board"
+		 이 메소드의 매개변수는 int 타입이고, 리턴타입은 Board타입 -->
+	<select id="selectByBno" parameterType="int" resultType="Board">
+		select bno, bcontent, btitle, mid, bdate, bhitcount, battachoname
+		from board
+		where bno = #{bno}	<!-- #{}안에 있는 변수명은 중요x -> 파라미터 타입으로 int형으로 바뀌기 때문 -->
+	</select>
 
+	<!-- 첨부파일 보이게, 다운로드 -->
+	<select id="selectAttachByBno" parameterType="int" resultType="Board">
+		select battachoname, battachtype, battachdata
+		from board
+		where bno = #{bno}
+	</select>
+	
+	<!-- 게시물 수정 -->
+	<update id="update" parameterType="Board">
+		update board 
+		set btitle = #{btitle},
+			bcontent = #{bcontent}
+			<if test="battachoname != null">
+				,
+				battachoname = #{battachoname},
+				battachtype = #{battachtype},
+				battachdata = #{battachdata}
+			</if>
+		where bno = #{bno}	
+	</update>
+	
+	<!-- 게시물 삭제 -->
+	<delete id="delete" parameterType="int">
+		delete from board where bno=#{bno}
+	</delete>
+	
+	<!-- 조회수 업데이트(증가) -->
+	<update id="updateHitcount" parameterType="int">
+		update board set
+		bhitcount = bhitcount+1
+		where bno=#{bno}
+	</update>
+	
 </mapper>

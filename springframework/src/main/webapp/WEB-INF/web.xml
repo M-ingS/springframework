@@ -97,8 +97,8 @@
    		<url-pattern>/*</url-pattern>	/*: 모든 요청이 들어올 때 이 필터를 동작시킴
    </filter-mapping> -->
    
-   <error-page>
+  <!--  <error-page>
    		<error-code>404</error-code>
    		<location>/WEB-INF/views/ch10/404.jsp</location>
-   </error-page>
+   </error-page> -->
 </web-app>

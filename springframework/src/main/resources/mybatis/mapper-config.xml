@@ -7,6 +7,7 @@
 	<!-- null을 넣는 공통 설정 -->
 	<settings>
 		<setting name="jdbcTypeForNull" value="NULL"/>
+		<setting name="mapUnderscoreToCamelCase" value=""/>
 	</settings>
 	
 	<typeAliases>

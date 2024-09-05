@@ -14,7 +14,15 @@ public interface Ch13BoardDao {
 	
 	public List<Ch13Board> selectList(Ch13Pager pager); // board.xml select문으로 List로 전체 게시글을 DB에 반영
 
-	public int countRows();	
+	public int countRows();		
+
+	public Ch13Board selectByBno(int bno);
+
+	public Ch13Board selectAttachByBno(int bno);
+
+	public int update(Ch13Board board);	// insert, update, delete는 반환타입을 int로 
 	
+	public int delete(int bno);
 	
+	public int updateHitcount(int bno);	//조회수 증가
 }
