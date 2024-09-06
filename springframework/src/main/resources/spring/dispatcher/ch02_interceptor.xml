@@ -6,12 +6,12 @@
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
 	
-	<!-- <mvc:interceptors>
+	<mvc:interceptors>
 		<mvc:interceptor>
-			<mvc:mapping path="/**"/>	요청경로 중에 ch02가 포함되어 있으면 인터셉터가 동작되게 - /ch02/**
-			<bean class="com.mycompany.springframework.interceptor.LoginCheckInterceptor"></bean>	bean: 이 클래스(LoginCheckInterceptor) 가지고 관리할 객체를 만듦
+			<mvc:mapping path="/**"/>	<!-- 요청경로 중에 ch02가 포함되어 있으면 인터셉터가 동작되게 - /ch02/** -->
+			<bean class="com.mycompany.springframework.interceptor.LoginCheckInterceptor"></bean>	<!-- bean: 이 클래스(LoginCheckInterceptor) 가지고 관리할 객체를 만듦  -->
 		</mvc:interceptor>
 		
-	</mvc:interceptors> -->
+	</mvc:interceptors>
 
 </beans>

@@ -291,8 +291,36 @@
 			data-bs-parent="#accordionMenu">
 			<div class="accordion-body">
 				<ul>
+					<li><a href="${pageContext.request.contextPath}/ch13/joinForm">회원 가입</a></li>
+					<li><a href="${pageContext.request.contextPath}/ch13/loginForm">로그인</a></li>
 					<li><a href="${pageContext.request.contextPath}/ch13/writeBoardForm">게시물 쓰기 </a></li>
 					<li><a href="${pageContext.request.contextPath}/ch13/boardList">게시물 목록 </a></li>
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<!-- Ch14 -->
+	<div class="accordion-item">
+		<h2 class="accordion-header">
+			<button class="accordion-button ${chNum=='ch14'?'':'collapsed'}"
+				type="button" data-bs-toggle="collapse" data-bs-target="#ch14"
+				aria-expanded="${chNum=='ch14'}" aria-controls="ch14">
+				Ch14. AOP </button>
+		</h2>
+		<div id="ch14"
+			class="accordion-collapse collapse ${chNum=='ch14'?'show':''}"
+			data-bs-parent="#accordionMenu">
+			<div class="accordion-body">
+				<ul>
+					<li><a href="${pageContext.request.contextPath}/ch14/before">메소드 호출 전 공통 코드 실행</a></li>
+					<li><a href="${pageContext.request.contextPath}/ch14/after">메소드 호출 후 공통 코드 실행</a></li>
+					<li><a href="${pageContext.request.contextPath}/ch14/afterReturning">메소드가 정상적으로 리턴값을 제공할 경우 공통 코드  실행</a></li>
+					<li><a href="${pageContext.request.contextPath}/ch14/afterThrowing">메소드에서 예외가 발생할 경우 공통 코드 실행</a></li>
+					<li><a href="${pageContext.request.contextPath}/ch14/around">메소드 호출 전, 후에 공통 코드 실행</a></li>
+					<li><a href="${pageContext.request.contextPath}/ch14/boardList">사례: 실행 시간 측정</a></li>
+					<li><a href="${pageContext.request.contextPath}/ch14/writeBoardForm">사례: 로그인 체크</a></li>
 					
 				</ul>
 			</div>

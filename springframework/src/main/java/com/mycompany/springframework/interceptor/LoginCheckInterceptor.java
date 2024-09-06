@@ -36,7 +36,8 @@ public class LoginCheckInterceptor implements HandlerInterceptor{
 					if (login == null) {
 						// 로그인을 하지 않았을 경우
 						String contextPath = request.getServletContext().getContextPath();
-						response.sendRedirect(contextPath + "/ch02/loginForm");
+						/*response.sendRedirect(contextPath + "/ch02/loginForm");*/
+						response.sendRedirect(contextPath + "/ch13/loginForm");
 						return false;	//로그인을 안했으니 로그인폼으로 리다이렉트
 					} else {
 						// 로그인을 했을 경우
