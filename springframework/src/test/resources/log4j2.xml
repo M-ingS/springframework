@@ -11,8 +11,14 @@
 			<AppenderRef ref="Console" />
 		</Root>
 		<!-- 내가 만든 자바소스 로그레벨: 디버그, 인포, 워닝 이상으로 설정 -->
-		<Logger name="com.mycompany.springframework" level="debug" additivity="false">
+		<Logger name="com.mycompany.springframework" level="info" additivity="false">
+			<AppenderRef ref="Console" />
+		</Logger>
+		<Logger name="jdbc.sqltiming" level="info" additivity="false">
 			<AppenderRef ref="Console" />
 		</Logger>
 	</Loggers>
+	
+	
+	
 </Configuration>
