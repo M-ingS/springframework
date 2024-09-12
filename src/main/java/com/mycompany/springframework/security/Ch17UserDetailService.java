@@ -1,4 +1,4 @@
-package com.mycompany.springframework.service;
+package com.mycompany.springframework.security;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +13,6 @@ import org.springframework.stereotype.Service;
 
 import com.mycompany.springframework.dao.mybatis.Ch13MemberDao;
 import com.mycompany.springframework.dto.Ch13Member;
-import com.mycompany.springframework.security.Ch17UserDetails;
 
 import lombok.extern.slf4j.Slf4j;
 

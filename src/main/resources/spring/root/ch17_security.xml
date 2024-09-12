@@ -18,16 +18,32 @@
 			login-processing-url="/login"
 			authentication-success-handler-ref="ch17AuthenticationSuccessHandler"
 			authentication-failure-handler-ref="ch17AuthenticationFailureHandler"/>
-
+												
 		<!-- 로그아웃 설정 -->
 		<security:logout 
 			logout-url="/logout"
 			success-handler-ref="ch17LogoutSuccessHandler"/>
 		
 		<!-- 사이트간 요청 위조 방지 비활성화 -->
-		<security:csrf disabled="true"/>
+		<!--<security:csrf disabled="true"/>	 개발할 때는 비활성화 -->
+		
+		<!-- 권한이 불충분할 경우 이동할 경로 -->
+		<!-- 로그인이 안되어 있을 경우: 로그인 폼으로 이동 --> 
+		<!-- 현재 로그인된 사용자가 권한 불충분일 경우 이동할 경로-->
+		<security:access-denied-handler error-page="/ch17/error403"/>
 			
 	</security:http>
+	
+	<!-- @Secured를 사용하기 위한 설정 -->
+	<!-- <dependency>
+	    <groupId>org.aspectj</groupId>
+	    <artifactId>aspectjweaver</artifactId>
+	    <version>1.9.22.1</version>
+	</dependency>
+	ch14_aop.xml
+	<aop:aspectj-autoproxy/> -->
+	<security:global-method-security secured-annotations="enabled" />
+	
 	<!-- 로그인이 성공 or 실패하면 이 관리객체로 등록되어 있는 클래스 실행 -->
 	<bean id="ch17AuthenticationSuccessHandler"
 		class="com.mycompany.springframework.security.Ch17AuthenticationSuccessHandler"/>
